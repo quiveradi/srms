@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Napindan Integrated School</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-gray-100">
+    <header class="fixed top-0 w-full bg-red-700 text-white p-4 flex items-center h-[70px] z-50">
+        <img class="w-[60px] h-[60px] mr-3" src="logo.png" alt="School Logo">
+        <div class="text-2xl font-bold">NAPINDAN INTEGRATED SCHOOL</div>
+    </header>
+
+    <nav class="fixed h-screen w-[250px] bg-[#424242] text-white">
+        <ul>
+            <li class="border-b border-white/30">
+                <a href="LIS_dashboard.php" class="flex items-center p-4 hover:bg-gray-500 transition-colors">
+                    <img src="white home.png" class="w-6 h-6 mr-3">
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li class="border-b border-white/30">
+                <a href="LIS_documents.php" class="flex items-center p-4 hover:bg-gray-500 transition-colors">
+                    <img src="white section.png" class="w-6 h-6 mr-3">
+                    <span>Documents</span>
+                </a>
+            </li>
+            <li class="border-b border-white/30">
+                <a href="LIS_settings.php" class="flex items-center p-4 hover:bg-gray-500 transition-colors">
+                    <img src="white settings.png" class="w-6 h-6 mr-3">
+                    <span>Settings</span>
+                </a>
+            </li>
+            <li class="absolute bottom-20 w-full border-t border-white/30">
+                <a href="LIS_login.php" class="flex items-center p-4 hover:bg-gray-500 transition-colors">
+                    <img src="white logout.png" class="w-6 h-6 mr-3">
+                    <span>Logout</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="ml-[250px] p-5 mt-[70px]">
+        <div class="max-w-[1000px] mx-auto">
+            <div class="bg-red-700 text-white rounded-lg shadow p-6 mb-6">
+                <h1 class="text-2xl font-bold">Elementary Enrollee</h1>
+                <p class="text-gray-200 mt-1">Napindan Integrated School | Academic Year 2024-2025</p>
+            </div>
+            
+            <div class="grid grid-cols-3 gap-6 mb-6 md:grid-cols-2 sm:grid-cols-1">
+                <!-- Grade Cards -->
+                <div class="bg-white rounded-lg shadow p-5 text-center hover:-translate-y-1 transition-transform">
+                    <h3 class="text-gray-600 mb-2">Grade 1</h3>
+                    <p class="text-3xl font-bold">167</p>
+                </div>
+                <div class="bg-white rounded-lg shadow p-5 text-center hover:-translate-y-1 transition-transform">
+                    <h3 class="text-gray-600 mb-2">Grade 2</h3>
+                    <p class="text-3xl font-bold">194</p>
+                </div>
+                <div class="bg-white rounded-lg shadow p-5 text-center hover:-translate-y-1 transition-transform">
+                    <h3 class="text-gray-600 mb-2">Grade 3</h3>
+                    <p class="text-3xl font-bold">200</p>
+                </div>
+                <div class="bg-white rounded-lg shadow p-5 text-center hover:-translate-y-1 transition-transform">
+                    <h3 class="text-gray-600 mb-2">Grade 4</h3>
+                    <p class="text-3xl font-bold">165</p>
+                </div>
+                <div class="bg-white rounded-lg shadow p-5 text-center hover:-translate-y-1 transition-transform">
+                    <h3 class="text-gray-600 mb-2">Grade 5</h3>
+                    <p class="text-3xl font-bold">206</p>
+                </div>
+                <div class="bg-white rounded-lg shadow p-5 text-center hover:-translate-y-1 transition-transform">
+                    <h3 class="text-gray-600 mb-2">Grade 6</h3>
+                    <p class="text-3xl font-bold">260</p>
+                </div>
+            </div>
+
+            <div class="max-w-[1000px] mx-auto">
+            <div class="bg-red-700 text-white rounded-lg shadow p-6 mb-6">
+                <h1 class="text-2xl font-bold">Junior High School Enrollee</h1>
+                <p class="text-gray-200 mt-1">Napindan Integrated School | Academic Year 2024-2025</p>
+            </div>
+            <div class="grid grid-cols-3 gap-6 mb-6 md:grid-cols-2 sm:grid-cols-1">
+                <div class="bg-white rounded-lg shadow p-5 text-center hover:-translate-y-1 transition-transform">
+                    <h3 class="text-gray-600 mb-2">Grade 7</h3>
+                    <p class="text-3xl font-bold">248</p>
+                </div>
+                <div class="bg-white rounded-lg shadow p-5 text-center hover:-translate-y-1 transition-transform">
+                    <h3 class="text-gray-600 mb-2">Grade 8</h3>
+                    <p class="text-3xl font-bold">231</p>
+                </div>
+                <div class="bg-white rounded-lg shadow p-5 text-center hover:-translate-y-1 transition-transform">
+                    <h3 class="text-gray-600 mb-2">Grade 9</h3>
+                    <p class="text-3xl font-bold">215</p>
+                </div>
+                <div class="bg-white rounded-lg shadow p-5 text-center hover:-translate-y-1 transition-transform">
+                    <h3 class="text-gray-600 mb-2">Grade 10</h3>
+                    <p class="text-3xl font-bold">204</p>
+                </div>
+            </div>
+                <!-- Repeat for other grades... -->
+                
+                <!-- Total Card -->
+                <div class="bg-red-700 text-white rounded-lg shadow p-5 text-center col-span-3 md:col-span-2 sm:col-span-1">
+                    <h3 class="text-gray-200 mb-2">TOTAL ENROLLMENT</h3>
+                    <p class="text-3xl font-bold">2,090</p>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow p-6 overflow-x-auto">
+                <h2 class="text-xl font-bold text-gray-800 mb-6 text-center">Enrollment Distribution by Grade Level</h2>
+                <div class="flex items-end justify-around min-w-[800px] h-[300px] p-5">
+                    <!-- Chart Bars -->
+                    <div class="relative w-20" style="height: 167px;">
+                        <div class="absolute -top-6 w-full text-center font-bold">167</div>
+                        <div class="w-full h-full bg-blue-600 rounded-t-md"></div>
+                        <div class="absolute -bottom-6 w-full text-center font-bold">Grade 1</div>
+                    </div>
+                    <div class="relative w-20" style="height: 194px;">
+                        <div class="absolute -top-6 w-full text-center font-bold">194</div>
+                        <div class="w-full h-full bg-blue-600 rounded-t-md"></div>
+                        <div class="absolute -bottom-6 w-full text-center font-bold">Grade 2</div>
+                    </div>
+                    <div class="relative w-20" style="height: 200px;">
+                        <div class="absolute -top-6 w-full text-center font-bold">200</div>
+                        <div class="w-full h-full bg-blue-600 rounded-t-md"></div>
+                        <div class="absolute -bottom-6 w-full text-center font-bold">Grade 3</div>
+                    </div><div class="relative w-20" style="height: 167px;">
+                        <div class="absolute -top-6 w-full text-center font-bold">165</div>
+                        <div class="w-full h-full bg-blue-600 rounded-t-md"></div>
+                        <div class="absolute -bottom-6 w-full text-center font-bold">Grade 4</div>
+                    </div>
+                    <div class="relative w-20" style="height: 206px;">
+                        <div class="absolute -top-6 w-full text-center font-bold">206</div>
+                        <div class="w-full h-full bg-blue-600 rounded-t-md"></div>
+                        <div class="absolute -bottom-6 w-full text-center font-bold">Grade 5</div>
+                    </div>
+                    <div class="relative w-20" style="height: 260px;">
+                        <div class="absolute -top-6 w-full text-center font-bold">260</div>
+                        <div class="w-full h-full bg-blue-600 rounded-t-md"></div>
+                        <div class="absolute -bottom-6 w-full text-center font-bold">Grade 6</div>
+                    </div>
+                    <div class="relative w-20" style="height: 248px;">
+                        <div class="absolute -top-6 w-full text-center font-bold">248</div>
+                        <div class="w-full h-full bg-blue-600 rounded-t-md"></div>
+                        <div class="absolute -bottom-6 w-full text-center font-bold">Grade 7</div>
+                    </div>
+                    <div class="relative w-20" style="height: 231px;">
+                        <div class="absolute -top-6 w-full text-center font-bold">231</div>
+                        <div class="w-full h-full bg-blue-600 rounded-t-md"></div>
+                        <div class="absolute -bottom-6 w-full text-center font-bold">Grade 8</div>
+                    </div>
+                    <div class="relative w-20" style="height: 215px;">
+                        <div class="absolute -top-6 w-full text-center font-bold">215</div>
+                        <div class="w-full h-full bg-blue-600 rounded-t-md"></div>
+                        <div class="absolute -bottom-6 w-full text-center font-bold">Grade 9</div>
+                    </div>  
+                    <div class="relative w-20" style="height: 204px;">
+                        <div class="absolute -top-6 w-full text-center font-bold">204</div>
+                        <div class="w-full h-full bg-blue-600 rounded-t-md"></div>
+                        <div class="absolute -bottom-6 w-full text-center font-bold">Grade 10</div>
+                    </div>
+                    <!-- Repeat for other grade levels... -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

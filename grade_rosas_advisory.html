@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Napindan Integrated School</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-gray-100">
+    <header class="fixed top-0 w-full bg-red-700 text-white p-4 flex items-center h-[70px] z-50">
+        <img class="w-[60px] h-[60px] mr-3" src="logo.png" alt="School Logo">
+        <div class="text-2xl font-bold">NAPINDAN INTEGRATED SCHOOL</div>
+    </header>
+
+    <nav class="fixed h-screen w-[250px] bg-[#424242] text-white">
+        <ul>
+            <li class="border-b border-white/30">
+                <a href="teacher_homepage.php" class="flex items-center p-4 hover:bg-[#555] transition-colors">
+                    <img src="white home.png" class="w-6 h-6 mr-3">
+                    <span>Home</span>   
+                </a>
+            </li>
+            <li class="border-b border-white/30">
+                <a href="teacher_section.php" class="flex items-center p-4 hover:bg-[#555] transition-colors">
+                    <img src="white section.png" class="w-6 h-6 mr-3">
+                    <span>Section</span>
+                </a>
+            </li>
+            <li class="border-b border-white/30">
+                <a href="teacher_grade.php" class="flex items-center p-4 hover:bg-[#555] transition-colors">
+                    <img src="white grades.png" class="w-6 h-6 mr-3">
+                    <span>Grade</span>
+                </a>
+            </li>
+            <li class="border-b border-white/30">
+                <a href="teacher_referral.php" class="flex items-center p-4 hover:bg-[#555] transition-colors">
+                    <img src="white referral.png" class="w-6 h-6 mr-3">
+                    <span>Referral</span>
+                </a>
+            </li>
+            <li class="border-b border-white/30">
+                <a href="teacher_settings.php" class="flex items-center p-4 hover:bg-[#555] transition-colors">
+                    <img src="white settings.png" class="w-6 h-6 mr-3">
+                    <span>Settings</span>
+                </a>
+            </li>
+            <li class="absolute bottom-20 w-full border-t border-white/30">
+                <a href="teacher_login.php" class="flex items-center p-4 hover:bg-[#555] transition-colors">
+                    <img src="white logout.png" class="w-6 h-6 mr-3">
+                    <span>Logout</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    
+    <main class="ml-[250px] p-5 mt-[70px] md:ml-[250px]">
+    <div class="max-w-4xl mx-auto">
+    <!-- Search Bar -->
+    <div class="mb-4 flex justify-center">
+      <div class="relative rounded-full border border-gray-300 w-64">
+        <input type="text" 
+               id="lrnSearch" 
+               placeholder="Enter LRN..." 
+               class="w-full pl-4 pr-10 py-1 rounded-full focus:outline-none"
+               onkeyup="searchLRN()">
+        <div class="absolute right-3 top-1/2 transform -translate-y-1/2">
+            <img src="searchbar.png" class="w-4 h-4">
+        </div>
+      </div>
+    </div>
+
+    <table class="w-full border-collapse bg-white" id="studentTable">
+        <!-- Table Header -->
+        <thead>
+          <tr class="bg-gray-200 text-left">
+            <th class="border px-4 py-2">Student Name</th>
+            <th class="border px-4 py-2">Gender</th>
+            <th class="border px-4 py-2">LRN</th>
+            <th class="border px-4 py-2 text-center">Actions</th>
+          </tr>
+        </thead>
+        <!-- Table Body -->
+        <tbody>
+          <tr class="bg-white">
+            <td class="border px-4 py-4">Bautista, Miguel Alfonso</td>
+            <td class="border px-4 py-4">M</td>
+            <td class="border px-4 py-4">304567891234</td>
+            <td class="border px-4 py-4 text-center">
+              <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded text-xs">View</button>
+              <button class="bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded text-xs">Edit</button>
+            </td>
+          </tr>
+          <tr class="bg-white">
+            <td class="border px-4 py-4">Cruz, Rafael Dominic</td>
+            <td class="border px-4 py-4">M</td>
+            <td class="border px-4 py-4">214567892345</td>
+            <td class="border px-4 py-4 text-center">
+              <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded text-xs">View</button>
+              <button class="bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded text-xs">Edit</button>
+            </td>
+          </tr>
+          <tr class="bg-white">
+            <td class="border px-4 py-4">Dela Cruz, Isagani Tomas</td>
+            <td class="border px-4 py-4">M</td>
+            <td class="border px-4 py-4">194567893456</td>
+            <td class="border px-4 py-4 text-center">
+              <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded text-xs">View</button>
+              <button class="bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded text-xs">Edit</button>
+            </td>
+          </tr>
+          <tr class="bg-white">
+            <td class="border px-4 py-4">De la Peña, Emilio Javier</td>
+            <td class="border px-4 py-4">M</td>
+            <td class="border px-4 py-4">384567894567</td>
+            <td class="border px-4 py-4 text-center"> 
+              <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded text-xs">View</button>
+              <button class="bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded text-xs">Edit</button>
+            </td>
+          </tr>
+          <tr class="bg-white">
+            <td class="border px-4 py-4">Enriquez, Andres Miguel</td>
+            <td class="border px-4 py-4">M</td>
+            <td class="border px-4 py-4">274567895678</td>
+            <td class="border px-4 py-4 text-center">
+              <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded text-xs">View</button>
+              <button class="bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded text-xs">Edit</button>
+            </td>
+          </tr>
+          <tr class="bg-white">
+            <td class="border px-4 py-4">Garcia, Teresa Lourdes</td>
+            <td class="border px-4 py-4">F</td>
+            <td class="border px-4 py-4">364567896789</td>
+            <td class="border px-4 py-4 text-center">
+              <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded text-xs">View</button>
+              <button class="bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded text-xs">Edit</button>
+            </td>
+          </tr>
+          <tr class="bg-white">
+            <td class="border px-4 py-4">Go, John Miguel</td>
+            <td class="border px-4 py-4">M</td>
+            <td class="border px-4 py-4">154567897890</td>
+            <td class="border px-4 py-4 text-center">
+              <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded text-xs">View</button>
+              <button class="bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded text-xs">Edit</button>
+            </td>
+          </tr>
+          <tr class="bg-white">
+            <td class="border px-4 py-4">Gomez, Rosario Feliciana</td>
+            <td class="border px-4 py-4">F</td>
+            <td class="border px-4 py-4">444567898901</td>
+            <td class="border px-4 py-4 text-center">
+              <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded text-xs">View</button>
+              <button class="bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded text-xs">Edit</button>
+            </td>
+          </tr>
+          <tr class="bg-white">
+            <td class="border px-4 py-4">Magpanua, Carmela Andrea</td>
+            <td class="border px-4 py-4">F</td>
+            <td class="border px-4 py-4">234567899012</td>
+            <td class="border px-4 py-4 text-center">
+              <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded text-xs">View</button>
+              <button class="bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded text-xs">Edit</button>
+            </td>
+          </tr>
+          <tr class="bg-white">
+            <td class="border px-4 py-4">Mendoza, Danilo Roberto</td>
+            <td class="border px-4 py-4">M</td>
+            <td class="border px-4 py-4">324567890123</td>
+            <td class="border px-4 py-4 text-center">
+              <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded text-xs">View</button>
+              <button class="bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded text-xs">Edit</button>
+            </td>
+          </tr>
+          <tr class="bg-white">
+            <td class="border px-4 py-4">Navarro, Carlos Emmanuel</td>
+            <td class="border px-4 py-4">M</td>
+            <td class="border px-4 py-4">214567801234</td>
+            <td class="border px-4 py-4 text-center">
+              <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded text-xs">View</button>
+              <button class="bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded text-xs">Edit</button>
+            </td>
+          </tr>
+          <tr class="bg-white">
+            <td class="border px-4 py-4">Ponce, Bituin Estrella</td>
+            <td class="border px-4 py-4">F</td>
+            <td class="border px-4 py-4">294567802345</td>
+            <td class="border px-4 py-4 text-center">
+              <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded text-xs">View</button>
+              <button class="bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded text-xs">Edit</button>
+            </td>
+          </tr>
+          <tr class="bg-white">
+            <td class="border px-4 py-4">Ramirez, Jose Antonio</td>
+            <td class="border px-4 py-4">M</td>
+            <td class="border px-4 py-4">374567803456</td>
+            <td class="border px-4 py-4 text-center">
+              <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded text-xs">View</button>
+              <button class="bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded text-xs">Edit</button>
+            </td>
+          </tr>
+          <tr class="bg-white">
+            <td class="border px-4 py-4">Reyes, Maria Isabella</td>
+            <td class="border px-4 py-4">F</td>
+            <td class="border px-4 py-4">454567804567</td>
+            <td class="border px-4 py-4 text-center">
+              <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded text-xs">View</button>
+              <button class="bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded text-xs">Edit</button>
+            </td>
+          </tr>
+          <tr class="bg-white">
+            <td class="border px-4 py-4">Salazar, Fernando Luis</td>
+            <td class="border px-4 py-4">M</td>
+            <td class="border px-4 py-4">534567805678</td>
+            <td class="border px-4 py-4 text-center">
+              <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded text-xs">View</button>
+              <button class="bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded text-xs">Edit</button>
+            </td>
+          </tr>
+          <tr class="bg-white">
+            <td class="border px-4 py-4">Sandoval, Anithan Teresa</td>
+            <td class="border px-4 py-4">F</td>
+            <td class="border px-4 py-4">614567806789</td>
+            <td class="border px-4 py-4 text-center">
+              <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded text-xs">View</button>
+              <button class="bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded text-xs">Edit</button>
+            </td>
+          </tr>
+          <tr class="bg-white">
+            <td class="border px-4 py-4">Santos, Andres Miguel</td>
+            <td class="border px-4 py-4">M</td>
+            <td class="border px-4 py-4">694567807890</td>
+            <td class="border px-4 py-4 text-center">
+              <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded text-xs">View</button>
+              <button class="bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded text-xs">Edit</button>
+            </td>
+          </tr>
+          <tr class="bg-white">
+            <td class="border px-4 py-4">Torres, Alona Graciela</td>
+            <td class="border px-4 py-4">F</td>
+            <td class="border px-4 py-4">774567808901</td>
+            <td class="border px-4 py-4 text-center">
+              <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded text-xs">View</button>
+              <button class="bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded text-xs">Edit</button>
+            </td>
+          </tr>
+          <tr class="bg-white">
+            <td class="border px-4 py-4">Villanueva, Ricardo Sebastian</td>
+            <td class="border px-4 py-4">M</td>
+            <td class="border px-4 py-4">854567809012</td>
+            <td class="border px-4 py-4 text-center">
+              <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded text-xs">View</button>
+              <button class="bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded text-xs">Edit</button>
+            </td>
+          </tr>
+          <tr class="bg-white">
+            <td class="border px-4 py-4">Yvares, Gianna Mae</td>
+            <td class="border px-4 py-4">F</td>
+            <td class="border px-4 py-4">934567810123</td>
+            <td class="border px-4 py-4 text-center">
+              <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded text-xs">View</button>
+              <button class="bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded text-xs">Edit</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script>
+    function searchLRN() {
+        const input = document.getElementById('lrnSearch');
+        const filter = input.value.toLowerCase();
+        const table = document.getElementById('studentTable');
+        const rows = table.getElementsByTagName('tr');
+
+        for (let i = 1; i < rows.length; i++) {
+            const lrnCell = rows[i].getElementsByTagName('td')[2];
+            if (lrnCell) {
+                const lrnValue = lrnCell.textContent || lrnCell.innerText;
+                if (lrnValue.toLowerCase().indexOf(filter) > -1) {
+                    rows[i].style.display = '';
+                } else {
+                    rows[i].style.display = 'none';
+                }
+            }
+        }
+    }
+    </script>
+</body>
+</html>

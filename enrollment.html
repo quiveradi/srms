@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Basic Enrollment Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 m-0 p-0">
+    <div class="max-w-5xl mx-auto bg-white shadow-lg">
+        <h2 class="bg-red-700 text-white p-4 text-center text-xl font-bold">Basic Enrollment Form</h2>
+        <form class="p-6">
+            <!-- School Year Section -->
+            <div class="border border-gray-200 rounded-lg p-6 mb-6">
+                <div class="mb-4">
+                    <label class="block mb-2">School Year:</label>
+                    <input type="text" name="school_year" required class="w-full p-2 border border-gray-300 rounded">
+                </div>
+                <div class="mb-4">
+                    <label class="block mb-2">Grade Level to Enroll:</label>
+                    <input type="text" name="grade_level" required class="w-full p-2 border border-gray-300 rounded">
+                </div>
+                <div class="mb-4">
+                    <label class="block mb-2">With LRN?</label>
+                    <div class="space-x-4">
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="with_lrn" value="1" class="mr-2">
+                            <span>Yes</span>
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="with_lrn" value="0" class="mr-2">
+                            <span>No</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <label class="block mb-2">Returning (Balik-Aral)?</label>
+                    <div class="space-x-4">
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="returning" value="1" class="mr-2">
+                            <span>Yes</span>
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="returning" value="0" class="mr-2">
+                            <span>No</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Learner Information Section -->
+            <div class="border border-gray-200 rounded-lg p-6 mb-6">
+                <h3 class="text-lg font-bold mb-4 pb-2 border-b border-gray-200">LEARNER INFORMATION</h3>
+                
+                <div class="mb-4">
+                    <label class="block mb-2">PSA Birth Certificate No. (if available upon registration):</label>
+                    <input type="text" name="psa_birth_certificate_no" class="w-full p-2 border border-gray-300 rounded">
+                </div>
+                
+                <div class="mb-4">
+                    <label class="block mb-2">Learner Reference No.:</label>
+                    <input type="text" name="learner_reference_no" class="w-full p-2 border border-gray-300 rounded">
+                </div>
+
+                <div class="space-y-4">
+                    <div>
+                        <label class="block mb-2">Last Name:</label>
+                        <input type="text" name="last_name" required class="w-full p-2 border border-gray-300 rounded">
+                    </div>
+                    
+                    <div>
+                        <label class="block mb-2">First Name:</label>
+                        <input type="text" name="first_name" required class="w-full p-2 border border-gray-300 rounded">
+                    </div>
+                    
+                    <div>
+                        <label class="block mb-2">Middle Name:</label>
+                        <input type="text" name="middle_name" class="w-full p-2 border border-gray-300 rounded">
+                    </div>
+                    
+                    <div>
+                        <label class="block mb-2">Birth Date:</label>
+                        <input type="date" name="birth_date" required class="w-full p-2 border border-gray-300 rounded">
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <label class="block mb-2">Sex:</label>
+                    <div class="space-x-4">
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="sex" value="Male" class="mr-2">
+                            <span>Male</span>
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="sex" value="Female" class="mr-2">
+                            <span>Female</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Current Address Section -->
+            <div class="border border-gray-200 rounded-lg p-6 mb-6">
+                <h3 class="text-lg font-bold mb-4 pb-2 border-b border-gray-200">Current Address</h3>
+                
+                <div class="space-y-4">
+                    <div>
+                        <label class="block mb-2">House No.:</label>
+                        <input type="text" name="current_house_no" class="w-full p-2 border border-gray-300 rounded">
+                    </div>
+                    
+                    <div>
+                        <label class="block mb-2">Street Name:</label>
+                        <input type="text" name="current_street" class="w-full p-2 border border-gray-300 rounded">
+                    </div>
+                    
+                    <div>
+                        <label class="block mb-2">Barangay:</label>
+                        <input type="text" name="current_barangay" class="w-full p-2 border border-gray-300 rounded">
+                    </div>
+                    
+                    <div>
+                        <label class="block mb-2">Municipality/City:</label>
+                        <input type="text" name="current_municipality_city" class="w-full p-2 border border-gray-300 rounded">
+                    </div>
+                    
+                    <div>
+                        <label class="block mb-2">Province:</label>
+                        <input type="text" name="current_province" class="w-full p-2 border border-gray-300 rounded">
+                    </div>
+                    
+                    <div>
+                        <label class="block mb-2">Country:</label>
+                        <input type="text" name="current_country" class="w-full p-2 border border-gray-300 rounded">
+                    </div>
+                    
+                    <div>
+                        <label class="block mb-2">Zipcode:</label>
+                        <input type="text" name="current_zipcode" class="w-full p-2 border border-gray-300 rounded">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Parents/Guardian Information Section -->
+            <div class="border border-gray-200 rounded-lg p-6 mb-6">
+                <h3 class="text-lg font-bold mb-4 pb-2 border-b border-gray-200">PARENT'S/GUARDIAN INFORMATION</h3>
+                
+                <!-- Father's Information -->
+                <div class="mb-6">
+                    <h4 class="font-semibold mb-3">Father's Name</h4>
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block mb-2">Last Name:</label>
+                            <input type="text" name="father_last_name" class="w-full p-2 border border-gray-300 rounded">
+                        </div>
+                        <div>
+                            <label class="block mb-2">First Name:</label>
+                            <input type="text" name="father_first_name" class="w-full p-2 border border-gray-300 rounded">
+                        </div>
+                        <div>
+                            <label class="block mb-2">Middle Name:</label>
+                            <input type="text" name="father_middle_name" class="w-full p-2 border border-gray-300 rounded">
+                        </div>
+                        <div>
+                            <label class="block mb-2">Phone Number:</label>
+                            <input type="text" name="father_phone" class="w-full p-2 border border-gray-300 rounded">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mother's Information -->
+                <div class="mb-6">
+                    <h4 class="font-semibold mb-3">Mother's Name</h4>
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block mb-2">Last Name:</label>
+                            <input type="text" name="mother_last_name" class="w-full p-2 border border-gray-300 rounded">
+                        </div>
+                        <div>
+                            <label class="block mb-2">First Name:</label>
+                            <input type="text" name="mother_first_name" class="w-full p-2 border border-gray-300 rounded">
+                        </div>
+                        <div>
+                            <label class="block mb-2">Middle Name:</label>
+                            <input type="text" name="mother_middle_name" class="w-full p-2 border border-gray-300 rounded">
+                        </div>
+                        <div>
+                            <label class="block mb-2">Phone Number:</label>
+                            <input type="text" name="mother_phone" class="w-full p-2 border border-gray-300 rounded">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Guardian's Information -->
+                <div class="mb-6">
+                    <h4 class="font-semibold mb-3">Guardian's Name</h4>
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block mb-2">Last Name:</label>
+                            <input type="text" name="guardian_last_name" class="w-full p-2 border border-gray-300 rounded">
+                        </div>
+                        <div>
+                            <label class="block mb-2">First Name:</label>
+                            <input type="text" name="guardian_first_name" class="w-full p-2 border border-gray-300 rounded">
+                        </div>
+                        <div>
+                            <label class="block mb-2">Middle Name:</label>
+                            <input type="text" name="guardian_middle_name" class="w-full p-2 border border-gray-300 rounded">
+                        </div>
+                        <div>
+                            <label class="block mb-2">Phone Number:</label>
+                            <input type="text" name="guardian_phone" class="w-full p-2 border border-gray-300 rounded">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Information Section -->
+            <div class="border border-gray-200 rounded-lg p-6 mb-6">
+                <h3 class="text-lg font-bold mb-4 pb-2 border-b border-gray-200">Additional Information</h3>
+                
+                <!-- Indigenous Peoples Section -->
+                <div class="mb-6">
+                    <label class="block mb-2">Belonging to any Indigenous Peoples (IP) Community/Indigenous Cultural Community:</label>
+                    <div class="space-x-4 mb-2">
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="is_indigenous" value="1" class="mr-2">
+                            <span>Yes</span>
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="is_indigenous" value="0" class="mr-2">
+                            <span>No</span>
+                        </label>
+                    </div>
+                    <div class="ml-4">
+                        <label class="block mb-2">If Yes, please specify:</label>
+                        <input type="text" name="indigenous_community" class="w-full p-2 border border-gray-300 rounded">
+                    </div>
+                </div>
+                
+                <!-- 4Ps Section -->
+                <div class="mb-6">
+                    <label class="block mb-2">Is your family a beneficiary of 4Ps?</label>
+                    <div class="space-x-4 mb-2">
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="is_4ps_beneficiary" value="1" class="mr-2">
+                            <span>Yes</span>
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="is_4ps_beneficiary" value="0" class="mr-2">
+                            <span>No</span>
+                        </label>
+                    </div>
+                    <div class="ml-4">
+                        <label class="block mb-2">If Yes, write the 4Ps Household ID Number:</label>
+                        <input type="text" name="4ps_household_id" class="w-full p-2 border border-gray-300 rounded">
+                    </div>
+                </div>
+                
+                <!-- Disability Section -->
+                <div class="mb-6">
+                    <label class="block mb-2">Is this child a Learner with Disability?</label>
+                    <div class="space-x-4 mb-4">
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="has_disability" value="1" class="mr-2">
+                            <span>Yes</span>
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="has_disability" value="0" class="mr-2">
+                            <span>No</span>
+                        </label>
+                    </div>
+                    
+                    <div class="ml-4">
+                        <label class="block mb-2">If Yes, specify the type of disability:</label>
+                        
+                        <div class="space-y-2">
+                            <div class="mb-2">
+                                <label class="inline-flex items-center">
+                                    <input type="checkbox" name="visual_impairment" value="1" class="mr-2">
+                                    <span>Visual Impairment</span>
+                                </label>
+                                <div class="ml-8 space-y-2">
+                                    <label class="inline-flex items-center">
+                                        <input type="checkbox" name="blind" value="1" class="mr-2">
+                                        <span>a. blind</span>
+                                    </label>
+                                    <br>
+                                    <label class="inline-flex items-center">
+                                        <input type="checkbox" name="low_vision" value="1" class="mr-2">
+                                        <span>b. low vision</span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <label class="inline-flex items-center">
+                                    <input type="checkbox" name="hearing_impairment" value="1" class="mr-2">
+                                    <span>Hearing Impairment</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="checkbox" name="autism_spectrum_disorder" value="1" class="mr-2">
+                                    <span>Autism Spectrum Disorder</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="checkbox" name="speech_language_disorder" value="1" class="mr-2">
+                                    <span>Speech/Language Disorder</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="checkbox" name="learning_disability" value="1" class="mr-2">
+                                    <span>Learning Disability</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="checkbox" name="emotional_behavioral_disorder" value="1" class="mr-2">
+                                    <span>Emotional-Behavioral Disorder</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="checkbox" name="cerebral_palsy" value="1" class="mr-2">
+                                    <span>Cerebral Palsy</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="checkbox" name="intellectual_disability" value="1" class="mr-2">
+                                    <span>Intellectual Disability</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="checkbox" name="orthopedic_physical_handicap" value="1" class="mr-2">
+                                    <span>Orthopedic/Physical Handicap</span>
+                                </label>
+                            </div>
+
+                            <div class="mb-2">
+                                <label class="inline-flex items-center">
+                                    <input type="checkbox" name="special_health_problem" value="1" class="mr-2">
+                                    <span>Special Health Problem/Chronic Disease</span>
+                                </label>
+                                <div class="ml-8">
+                                    <label class="inline-flex items-center">
+                                        <input type="checkbox" name="has_cancer" value="1" class="mr-2">
+                                        <span>a. Cancer</span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="inline-flex items-center">
+                                    <input type="checkbox" name="multiple_disorder" value="1" class="mr-2">
+                                    <span>Multiple Disorder</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="bg-red-700 text-white px-8 py-2 rounded hover:bg-red-800 transition-colors">
+                    Submit
+                </button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
